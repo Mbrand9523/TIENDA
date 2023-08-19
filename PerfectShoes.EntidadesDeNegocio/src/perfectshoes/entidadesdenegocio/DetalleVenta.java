@@ -9,5 +9,5 @@ package perfectshoes.entidadesdenegocio;
  * @author Carmen Estela
  */
 public class DetalleVenta {
-    
+    // ESPACIO PARA COMENTARIOS
 }
