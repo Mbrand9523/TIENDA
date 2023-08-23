@@ -18,12 +18,12 @@ public class Proveedor {
     private String telefono;
     private String direccion;
     private int top_aux;
-    private ArrayList<Proveedor> proveedor;
+    private ArrayList<Productos> productos;
 
     public Proveedor() {
     }
 
-    public Proveedor(int id, String nombre, String apellido, String razon_social, String telefono, String direccion, int top_aux, ArrayList<Proveedor> proveedor) {
+    public Proveedor(int id, String nombre, String apellido, String razon_social, String telefono, String direccion, int top_aux, ArrayList<Productos> productos) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -31,7 +31,7 @@ public class Proveedor {
         this.telefono = telefono;
         this.direccion = direccion;
         this.top_aux = top_aux;
-        this.proveedor = proveedor;
+        this.productos = productos;
     }
 
     public int getId() {
@@ -90,12 +90,14 @@ public class Proveedor {
         this.top_aux = top_aux;
     }
 
-    public ArrayList<Proveedor> getProveedor() {
-        return proveedor;
+    public ArrayList<Productos> getProductos() {
+        return productos;
     }
 
-    public void setProveedor(ArrayList<Proveedor> proveedor) {
-        this.proveedor = proveedor;
+    public void setProductos(ArrayList<Productos> productos) {
+        this.productos = productos;
     }
+
+    
     
 }

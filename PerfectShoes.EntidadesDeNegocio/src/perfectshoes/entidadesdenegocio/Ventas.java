@@ -16,18 +16,18 @@ public class Ventas {
     private int idProductos;
     private LocalDate fecha;
     private int top_aux;
-    private ArrayList<Productos> productos;
+    private ArrayList<Clientes> clientes;/**/
     private Productos producto;
 
     public Ventas() {
     }
 
-    public Ventas(int id, int idProductos, LocalDate fecha, int top_aux, ArrayList<Productos> productos, Productos producto) {
+    public Ventas(int id, int idProductos, LocalDate fecha, int top_aux, ArrayList<Clientes> clientes, Productos producto) {
         this.id = id;
         this.idProductos = idProductos;
         this.fecha = fecha;
         this.top_aux = top_aux;
-        this.productos = productos;
+        this.clientes = clientes;
         this.producto = producto;
     }
 
@@ -63,12 +63,12 @@ public class Ventas {
         this.top_aux = top_aux;
     }
 
-    public ArrayList<Productos> getProductos() {
-        return productos;
+    public ArrayList<Clientes> getClientes() {
+        return clientes;
     }
 
-    public void setProductos(ArrayList<Productos> productos) {
-        this.productos = productos;
+    public void setClientes(ArrayList<Clientes> clientes) {
+        this.clientes = clientes;
     }
 
     public Productos getProducto() {
@@ -78,5 +78,6 @@ public class Ventas {
     public void setProducto(Productos producto) {
         this.producto = producto;
     }
+
     
 }
