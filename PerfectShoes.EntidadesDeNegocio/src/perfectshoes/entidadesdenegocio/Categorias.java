@@ -8,6 +8,7 @@ package perfectshoes.entidadesdenegocio;
  *
  * @author Carmen Estela
  */
+
 public class Categorias {
     private int id;
     private int idProductos;

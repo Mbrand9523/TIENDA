@@ -8,6 +8,10 @@ package perfectshoes.accesoadatos;
  *
  * @author Carmen Estela
  */
+import java.util.*;
+import java.sql.*;
+import perfectshoes.entidadesdenegocio.*;
+
 public class ClientesDAL {
     
 }

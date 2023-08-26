@@ -183,6 +183,7 @@ public class CategoriasDAL {
             categorias = categoria.get(0);
         }
         return categorias;
+        
     }
       
      public static ArrayList<Categorias> obtenerTodos() throws Exception
