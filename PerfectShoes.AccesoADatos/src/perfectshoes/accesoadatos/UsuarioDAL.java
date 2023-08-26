@@ -60,6 +60,7 @@ public class UsuarioDAL {
         }
         return sql;
     }
+    
     private static boolean existeLogin(Usuario pUsuario) throws Exception {
         boolean existe = false;
         ArrayList<Usuario> usuarios = new ArrayList();
