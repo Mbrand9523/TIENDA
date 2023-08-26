@@ -8,22 +8,22 @@ package perfectshoes.entidadesdenegocio;
  *
  * @author Carmen Estela
  */
-  import java.util.ArrayList;
-
 public class Categorias {
     private int id;
     private int idProductos;
     private String nombrescategorias;
-    private Productos productos;  
+    private String productos;  
+    private int top_aux;
 
     public Categorias() {
     }
 
-    public Categorias(int id, int idProductos, String nombrescategorias, Productos productos) {
+    public Categorias(int id, int idProductos, String nombrescategorias, String productos, int top_aux) {
         this.id = id;
         this.idProductos = idProductos;
         this.nombrescategorias = nombrescategorias;
         this.productos = productos;
+        this.top_aux = top_aux;
     }
 
     public int getId() {
@@ -50,13 +50,21 @@ public class Categorias {
         this.nombrescategorias = nombrescategorias;
     }
 
-    public Productos getProductos() {
+    public String getProductos() {
         return productos;
     }
 
-    public void setProductos(Productos productos) {
+    public void setProductos(String productos) {
         this.productos = productos;
     }
 
-   
+    public int getTop_aux() {
+        return top_aux;
+    }
+
+    public void setTop_aux(int top_aux) {
+        this.top_aux = top_aux;
+    }
+    
+    
 }

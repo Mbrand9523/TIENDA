@@ -13,29 +13,28 @@ import java.util.ArrayList;
 public class Productos {
      private int id;
      private int idProveedor;
-     private int idmarca;
+     private int marca;
      private String nombre;
      private String cantidad;
      private Double precio;
      private String talla; 
      private Proveedor proveedor;
+     private int top_aux;
      private ArrayList<Categorias> categorias;
-     
-    private Marca marcas;
 
     public Productos() {
     }
 
-    public Productos(int id, int idProveedor, int idmarca, String nombre, String cantidad, Double precio, String talla, Proveedor proveedor, Marca marcas, ArrayList<Categorias> categorias) {
+    public Productos(int id, int idProveedor, int idmarca, String nombre, String cantidad, Double precio, String talla, Proveedor proveedor, int top_aux, ArrayList<Categorias> categorias) {
         this.id = id;
         this.idProveedor = idProveedor;
-        this.idmarca = idmarca;
+        this.marca = marca;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.precio = precio;
         this.talla = talla;
         this.proveedor = proveedor;
-        this.marcas = marcas;
+        this.top_aux = top_aux;
         this.categorias = categorias;
     }
 
@@ -56,11 +55,11 @@ public class Productos {
     }
 
     public int getIdmarca() {
-        return idmarca;
+        return marca;
     }
 
     public void setIdmarca(int idmarca) {
-        this.idmarca = idmarca;
+        this.marca = idmarca;
     }
 
     public String getNombre() {
@@ -103,12 +102,12 @@ public class Productos {
         this.proveedor = proveedor;
     }
 
-    public Marca getMarcas() {
-        return marcas;
+    public int getTop_aux() {
+        return top_aux;
     }
 
-    public void setMarcas(Marca marcas) {
-        this.marcas = marcas;
+    public void setTop_aux(int top_aux) {
+        this.top_aux = top_aux;
     }
 
     public ArrayList<Categorias> getCategorias() {
@@ -119,7 +118,12 @@ public class Productos {
         this.categorias = categorias;
     }
 
-   
+    public void setmarca(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+     
+     
+
 }
 
    
