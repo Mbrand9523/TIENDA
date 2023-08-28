@@ -150,6 +150,31 @@ public class ProductosDAL {
                
         return pIndex;
     }
+          
+    private static void obtenerDatosIncluirProveedor(PreparedStatement pPS, ArrayList<Productos> pProductos) throws Exception {
+        try (ResultSet resultSet = ComunDB.obtenerResulSet(pPS);) { 
+            HashMap<Integer, Proveedor> proveedorMap = new HashMap(); 
+            while (resultSet.next()) { 
+                Productos productos = new Productos();
+                 
+                int index = asignarDatosResultSet(productos, resultSet, 0);
+                if (proveedorMap.containsKey(productos.getIdProveedor()) == false) { 
+                    Proveedor proveedor = new Proveedor();
+                    
+                    ProveedorDAL.asignarDatosResultSet(proveedor, resultSet, index);
+                    proveedorMap.put(proveedor.getId(), proveedor); 
+                    productos.setProveedor(proveedor); 
+                } else {
+                    
+                    productos.setProveedor(proveedorMap.get(productos.getIdProveedor())); 
+                }
+                pProductos.add(productos); 
+            }
+            resultSet.close(); 
+        } catch (SQLException ex) {
+            throw ex; 
+        }
+    }      
     
      private static void obtenerDatos(PreparedStatement pPS, ArrayList<Productos> pProductos) throws Exception
     {
