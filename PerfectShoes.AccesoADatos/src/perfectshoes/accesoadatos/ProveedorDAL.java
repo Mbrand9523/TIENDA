@@ -167,6 +167,7 @@ public class ProveedorDAL {
         pProveedor.setDireccion(pResultSet.getString(pIndex));
         return pIndex;
     }
+     
      private static void obtenerDatos(PreparedStatement pPS, ArrayList<Proveedor> pProveedor) throws Exception
     {
         try(ResultSet resultset = ComunDB.obtenerResulSet(pPS);)
