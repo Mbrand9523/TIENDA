@@ -24,7 +24,6 @@ import perfectshoes.appweb.utils.*;
  */
 @WebServlet(name = "ProductosServlet", urlPatterns = {"/ProductosServlet"})
 public class ProductosServlet extends HttpServlet {
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,35 +33,38 @@ public class ProductosServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-private Productos obtenerProductos(HttpServletRequest request)
-    {
-        String accion = Utilidad.getParameter(request, "accion", "index");
-        Productos productos = new Productos();
-        productos.setNombre(Utilidad.getParameter(request, "nombre", 
-                ""));
-        productos.setCantidad(Utilidad.getParameter(request, "cantidad", 
-                ""));
-        productos.setPrecio(Double.parseDouble(Utilidad.getParameter(request, "precio", 
-                "")));
-        productos.setTalla(Utilidad.getParameter(request, "nombre", 
-                ""));
-        
-        if(accion.equals("create") == false)
+    private Productos obtenerProductos(HttpServletRequest request)
         {
-            //Obtiene el parametro de Id del request y asigna el valor a la propiedad 
-            //Id de la instancia
-            productos.setId(Integer.parseInt(Utilidad.getParameter(request, "id",
+            String accion = Utilidad.getParameter(request, "accion", "index");
+            Productos productos = new Productos();
+            productos.setNombre(Utilidad.getParameter(request, "nombre", 
+                    ""));
+            productos.setCantidad(Utilidad.getParameter(request, "cantidad", 
+                    ""));
+            productos.setPrecio(Double.parseDouble(Utilidad.getParameter(request, "precio", 
+                    "")));
+            productos.setTalla(Utilidad.getParameter(request, "nombre", 
+                    ""));
+            productos.setIdProveedor(Integer.parseInt(Utilidad.getParameter(request,
+                    "idProveedor",
                     "0")));
+
+            if(accion.equals("create") == false)
+            {
+                //Obtiene el parametro de Id del request y asigna el valor a la propiedad 
+                //Id de la instancia
+                productos.setId(Integer.parseInt(Utilidad.getParameter(request, "id",
+                        "0")));
+            }
+            productos.setNombre(Utilidad.getParameter(request, "nombre", ""));
+            if(accion.equals("index"))
+            {
+                productos.setTop_aux(Integer.parseInt(Utilidad.getParameter(request, 
+                        "top_aux", "10")));
+                productos.setTop_aux(productos.getTop_aux() == 0 ? Integer.MAX_VALUE: productos.getTop_aux());
+            }
+            return productos;
         }
-        productos.setNombre(Utilidad.getParameter(request, "nombre", ""));
-        if(accion.equals("index"))
-        {
-            productos.setTop_aux(Integer.parseInt(Utilidad.getParameter(request, 
-                    "top_aux", "10")));
-            productos.setTop_aux(productos.getTop_aux() == 0 ? Integer.MAX_VALUE: productos.getTop_aux());
-        }
-        return productos;
-    }
 
     protected void doGetRequestIndex(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -88,7 +90,7 @@ private Productos obtenerProductos(HttpServletRequest request)
         {
             Productos productos = obtenerProductos(request);
             ArrayList<Productos> producto = ProductosDAL.buscar(productos);
-            request.setAttribute("produto", producto);
+            request.setAttribute("produtos", producto);
             request.setAttribute("top_aux", productos.getTop_aux());
             request.getRequestDispatcher("Views/Productos/index.jsp")
              .forward(request, response);
@@ -231,7 +233,7 @@ private Productos obtenerProductos(HttpServletRequest request)
             String accion = Utilidad.getParameter(request, "accion", "index")
                     ;
                 switch(accion)
-            {
+                {
                 case "index":
                     request.setAttribute("accion", accion);
                     doGetRequestIndex(request, response);
@@ -256,7 +258,7 @@ private Productos obtenerProductos(HttpServletRequest request)
                     request.setAttribute("accion", accion);
                     doGetRequestIndex(request, response);
                     break;
-            }            
+                }            
         
     }
 
@@ -274,7 +276,7 @@ private Productos obtenerProductos(HttpServletRequest request)
             String accion = Utilidad.getParameter(request, "accion", "index");
 
                 switch(accion)
-            {
+                {
                 case "index":
                     request.setAttribute("accion", accion);
                     doPostRequestIndex(request, response);
@@ -295,7 +297,7 @@ private Productos obtenerProductos(HttpServletRequest request)
                     request.setAttribute("accion", accion);
                     doGetRequestIndex(request, response);
                     break;
-            }
+                }
     }
 
     /**
