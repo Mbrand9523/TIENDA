@@ -117,7 +117,6 @@ public class CategoriasServlet extends HttpServlet {
             {
                 Utilidad.enviarError("Error al Guardar el Regisgtro", request, response);
             }
-
         }
         catch(Exception ex)
         {
