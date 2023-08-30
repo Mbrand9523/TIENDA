@@ -136,7 +136,7 @@ public class CategoriasServlet extends HttpServlet {
             }
             else
             {
-                Utilidad.enviarError("El id: " + categorias.getId() + " no existe en la tabla rol", 
+                Utilidad.enviarError("El id: " + categorias.getId() + " no existe en la tabla categorias", 
                         request, response);
             }
         }
