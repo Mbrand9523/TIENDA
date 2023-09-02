@@ -1,17 +1,24 @@
-<%-- 
-    Document   : select
-    Created on : 30 ago 2023, 22:03:41
-    Author     : MINEDUCYT
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@page import="perfectshoes.entidadesdenegocio.Productos" %>
+<%@page import="perfectshoes.accesoadatos.ProductosDAL" %>
+<%@page import="java.util.ArrayList" %>
+
+<%
+    ArrayList<Productos> producto = ProductosDAL.obtenerTodos();
+    int id = Integer.parseInt(request.getParameter("id"));
+%>
+<select id="slProductos" name="idProductos">
+    <option <%=(id == 0) ? "selected" : ""%> value="0">Seleccionar</option>
+    <% 
+        for(Productos productos:producto)
+        {
+    %>
+    <option <%=(id == productos.getId()) ? "selected" : "" %>
+        value="<%=productos.getId()%>">
+        <%=productos.getNombre()%>
+    </option>
+    <% } %>
+</select>
+<label for="slProductos">Productos</label>
+
+
