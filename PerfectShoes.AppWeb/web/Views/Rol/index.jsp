@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="sysseguridadg04.entidadesdenegocio.Rol"%>
+<%@page import="perfectshoes.entidadesdenegocio.Rol"%>
 <%@page import="java.util.ArrayList" %>
 <%ArrayList<Rol> roles = (ArrayList<Rol>) request.getAttribute("roles");
     int numPage = 1;

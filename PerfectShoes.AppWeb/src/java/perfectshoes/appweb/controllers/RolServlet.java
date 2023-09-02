@@ -20,7 +20,7 @@ import perfectshoes.appweb.utils.*;
  *
  * @author Carmen Estela
  */
-@WebServlet(name = "RolServlet", urlPatterns = {"/RolServlet"})
+@WebServlet(name = "RolServlet", urlPatterns = {"/Rol"})
 public class RolServlet extends HttpServlet {
 
     /**

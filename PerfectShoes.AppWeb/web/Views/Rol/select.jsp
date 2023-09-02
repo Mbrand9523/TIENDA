@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="sysseguridadg04.entidadesdenegocio.Rol" %>
-<%@page import="sysseguridadg04.accesoadatos.RolDAL" %>
+<%@page import="perfectshoes.entidadesdenegocio.Rol" %>
+<%@page import="perfectshoes.accesoadatos.RolDAL" %>
 <%@page import="java.util.ArrayList" %>
 <%
     ArrayList<Rol> roles = RolDAL.obtenerTodos();

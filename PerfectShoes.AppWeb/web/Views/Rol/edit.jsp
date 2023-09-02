@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="sysseguridadg04.entidadesdenegocio.Rol" %>
+<%@page import="perfectshoes.entidadesdenegocio.Rol" %>
 <% 
     Rol rol = (Rol) request.getAttribute("rol");
 %>

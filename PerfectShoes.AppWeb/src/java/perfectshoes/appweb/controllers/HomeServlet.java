@@ -12,15 +12,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.util.ArrayList;
-import perfectshoes.accesoadatos.RolDAL;
-import perfectshoes.entidadesdenegocio.Rol;
-import perfectshoes.appweb.utils.*;
+
 /**
  *
  * @author Carmen Estela
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/HomeServlet"})
+@WebServlet(name = "HomeServlet", urlPatterns = {"/Home "})
 public class HomeServlet extends HttpServlet {
 
    /**

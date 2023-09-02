@@ -1,8 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="sysseguridadg04.appweb.utils.*"%>
+<%@page import="perfectshoes.appweb.utils.*"%>
 <nav>
     <div class="nav-wrapper blue">
-        <a href="Home" class="brand-logo">SysSeguridad</a>
+        <a href="Home" class="brand-logo">Perfect Shoes</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>       
         <ul class="right hide-on-med-and-down">  
             <% if (SessionUser.isAuth(request)) {  %>
@@ -18,6 +18,7 @@
 
  <ul class="sidenav" id="mobile-demo">
     <% if (SessionUser.isAuth(request)) {  %>
+    
     <li><a href="Home">Inicio</a></li>
     <li><a href="Usuario">Usuario</a></li>
     <li><a href="Rol">Rol</a></li>

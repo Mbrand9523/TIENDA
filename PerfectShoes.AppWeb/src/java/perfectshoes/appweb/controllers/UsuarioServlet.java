@@ -22,7 +22,7 @@ import perfectshoes.entidadesdenegocio.*;
  *
  * @author Carmen Estela
  */
-@WebServlet(name = "UsuarioServlet", urlPatterns = {"/UsuarioServlet"})
+@WebServlet(name = "UsuarioServlet", urlPatterns = {"/Usuario"})
 public class UsuarioServlet extends HttpServlet {
 
     /**

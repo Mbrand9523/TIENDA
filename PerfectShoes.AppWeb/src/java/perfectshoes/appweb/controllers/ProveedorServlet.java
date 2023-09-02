@@ -21,7 +21,7 @@ import perfectshoes.appweb.utils.*;
  *
  * @author Carmen Estela
  */
-@WebServlet(name = "ProveedorServlet", urlPatterns = {"/ProveedorServlet"})
+@WebServlet(name = "ProveedorServlet", urlPatterns = {"/Proveedor"})
 public class ProveedorServlet extends HttpServlet {
 
     /**

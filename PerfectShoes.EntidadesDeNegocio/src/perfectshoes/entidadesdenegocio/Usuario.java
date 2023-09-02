@@ -17,7 +17,6 @@ public class Usuario {
     private String apellido;
     private String login;
     private String password;
-    private byte estatus;
     private LocalDate fechaRegistro;
     private int top_aux;
     private String confirmPassword_aux;
@@ -26,14 +25,13 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmPassword_aux, Rol rol) {
+    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, LocalDate fechaRegistro, int top_aux, String confirmPassword_aux, Rol rol) {
         this.id = id;
         this.idRol = idRol;
         this.nombre = nombre;
         this.apellido = apellido;
         this.login = login;
         this.password = password;
-        this.estatus = estatus;
         this.fechaRegistro = fechaRegistro;
         this.top_aux = top_aux;
         this.confirmPassword_aux = confirmPassword_aux;
@@ -88,13 +86,7 @@ public class Usuario {
         this.password = password;
     }
 
-    public byte getEstatus() {
-        return estatus;
-    }
-
-    public void setEstatus(byte estatus) {
-        this.estatus = estatus;
-    }
+    
 
     public LocalDate getFechaRegistro() {
         return fechaRegistro;
