@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <html >
-    
+   
     <center>
         
         <head>
@@ -17,7 +17,7 @@
                <div class="container">
                 <div class="row">
 
-                    <div class="col s6 offset-s3 z-depth-1" id="panell">
+                    <div class="col s6 offset-s3 #e0f2f1 teal lighten-5" id="panell">
                       <h5 id="title">Inicio Sesion</h5>
                       
                       <form action="Usuario?accion=login" method="post">
@@ -26,7 +26,7 @@
 
                           <div class="input-field" style="width: 150px; height: 150px;" id="username">
                       <i class="material-icons prefix">account_circle</i>
-                        <input type="text" id="txtLogin" name ="login" required
+                        <input  type="text" id="txtLogin" name ="login" required
                                    class="validate" maxlength="30">
                             <label for="txtLogin">Correo</label>
                     </div>

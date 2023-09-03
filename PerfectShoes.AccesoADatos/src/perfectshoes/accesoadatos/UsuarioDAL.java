@@ -36,7 +36,7 @@ public class UsuarioDAL {
      static String obtenerCampos()
     {
         return "u.Id, u.IdRol, u.Nombre, u.Apellido, u.Login"
-                + ",u.FechaRegistro";
+                + ",u.FechaRegistro ,u.Estatus";
     }
     private static String obtenerSelect(Usuario pUsuario)
     {

@@ -10,8 +10,7 @@ package perfectshoes.accesoadatos;
  */
 import java.sql.*;
 public class ComunDB {
-    //clase para tipo de SGBD al que estamos 
-    //Accediendo
+   
     class TipoDB{
         static final int SQLSERVER = 1;
         static final int MYSQL = 2;
@@ -20,13 +19,12 @@ public class ComunDB {
     static int TIPODB = TipoDB.SQLSERVER;
     static String connectionURL = "jdbc:sqlserver://localhost:1433;"
             + "database=DB_PerfectShoes2;"
-            + "user=sa;"
+            + "user=JavaUser;"
             + "password=123456789;"
             + "loginTimeout=30;encrypt=false;trustServerCertificate=false";
             //+ "integratedSecurity=true";
     
-    /*Metodo utilizado para obtener la conexion abierta a un gestor
-    de base de datos*/
+    
     public static Connection obtenerConexion() throws SQLException
     {
         DriverManager.registerDriver(new 
@@ -35,11 +33,7 @@ public class ComunDB {
                 connectionURL);
         return connect;
     }
-    /*
-    el metodo createStatement lo utilizaremos para devolver un 
-    statement el cual permite ejecutar una consulta de INSERT,
-    UPDATE, DELETE y SELECT en la base de datos
-    */
+  
     public static Statement createStatement(Connection pCon) throws SQLException
     {
         Statement statement = pCon.createStatement();

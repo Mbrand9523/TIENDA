@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="perfectshoes.appweb.utils.*"%>
+<%@page import="jakarta.servlet.http.HttpServletRequest"%>
 <% if (SessionUser.isAuth(request) == false) {
          response.sendRedirect("Usuario?accion=login");
     }
