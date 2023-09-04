@@ -8,6 +8,9 @@ package perfectshoes.entidadesdenegocio;
  *
  * @author Carmen Estela
  */
+import java.util.ArrayList;
+import java.time.LocalDate;
+
 public class DetalleVenta {
     private int id;
     private int idVentas;
@@ -21,11 +24,12 @@ public class DetalleVenta {
     private Ventas ventas;
     private Productos producto;
     private Categorias categoria;
+    private int top_aux;
 
     public DetalleVenta() {
     }
 
-    public DetalleVenta(int id, int idVentas, int idProductos, int idCategorias, String nombre, String marca, String cantidad, Double precio, int subtotal, Ventas ventas, Productos producto, Categorias categoria) {
+    public DetalleVenta(int id, int idVentas, int idProductos, int idCategorias, String nombre, String marca, String cantidad, Double precio, int subtotal, Ventas ventas, Productos producto, Categorias categoria, int top_aux) {
         this.id = id;
         this.idVentas = idVentas;
         this.idProductos = idProductos;
@@ -38,6 +42,7 @@ public class DetalleVenta {
         this.ventas = ventas;
         this.producto = producto;
         this.categoria = categoria;
+        this.top_aux = top_aux;
     }
 
     public int getId() {
@@ -135,7 +140,13 @@ public class DetalleVenta {
     public void setCategoria(Categorias categoria) {
         this.categoria = categoria;
     }
-   
 
+    public int getTop_aux() {
+        return top_aux;
+    }
+
+    public void setTop_aux(int top_aux) {
+        this.top_aux = top_aux;
+    }
     
 }

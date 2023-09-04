@@ -5,7 +5,7 @@
 <!-- Compiled and minified CSS -->
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
 <link rel="stylesheet" href="<%=Utilidad.obtenerRuta(request, "/wwwroot/lib/materialize/css/materialize.min.css") %>">
-//PARA ESTILO CSS DESDE VISUALCODE
+<!--PARA ESTILO CSS DESDE VISUALCODE-->
 <link rel="stylesheet" href="<%=Utilidad.obtenerRuta(request, "/wwwroot/css/PerfectShoes.css") %>">
 
 <script
