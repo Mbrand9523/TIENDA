@@ -12,47 +12,45 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Ventas {
-    private int id;
-    private int idProductos;
-    private LocalDate fecha;
+    private int Id;
+    private int IdClientes;
+    private String Fecha;
     private int top_aux;
-    private ArrayList<Clientes> clientes;/**/
-    private Productos producto;
+    private Ventas ventas;
 
     public Ventas() {
     }
 
-    public Ventas(int id, int idProductos, LocalDate fecha, int top_aux, ArrayList<Clientes> clientes, Productos producto) {
-        this.id = id;
-        this.idProductos = idProductos;
-        this.fecha = fecha;
+    public Ventas(int Id, int IdClientes, String Fecha, int top_aux, Ventas ventas) {
+        this.Id = Id;
+        this.IdClientes = IdClientes;
+        this.Fecha = Fecha;
         this.top_aux = top_aux;
-        this.clientes = clientes;
-        this.producto = producto;
+        this.ventas = ventas;
     }
 
     public int getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
-    public int getIdProductos() {
-        return idProductos;
+    public int getIdClientes() {
+        return IdClientes;
     }
 
-    public void setIdProductos(int idProductos) {
-        this.idProductos = idProductos;
+    public void setIdClientes(int IdClientes) {
+        this.IdClientes = IdClientes;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public String getFecha() {
+        return Fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
     }
 
     public int getTop_aux() {
@@ -63,21 +61,12 @@ public class Ventas {
         this.top_aux = top_aux;
     }
 
-    public ArrayList<Clientes> getClientes() {
-        return clientes;
+    public Ventas getVentas() {
+        return ventas;
     }
 
-    public void setClientes(ArrayList<Clientes> clientes) {
-        this.clientes = clientes;
+    public void setVentas(Ventas ventas) {
+        this.ventas = ventas;
     }
-
-    public Productos getProducto() {
-        return producto;
-    }
-
-    public void setProducto(Productos producto) {
-        this.producto = producto;
-    }
-
     
 }
