@@ -18,18 +18,19 @@ public class DetalleVenta {
     private int idCategorias;
     private String nombre;
     private String marca;
-    private String cantidad;
+    private Double cantidad;
     private Double precio;
-    private int subtotal;
+    private Double subtotal;
+    private Double Total;
     private Ventas ventas;
-    private Productos producto;
+    private Productos productos;
     private Categorias categoria;
     private int top_aux;
 
     public DetalleVenta() {
     }
 
-    public DetalleVenta(int id, int idVentas, int idProductos, int idCategorias, String nombre, String marca, String cantidad, Double precio, int subtotal, Ventas ventas, Productos producto, Categorias categoria, int top_aux) {
+    public DetalleVenta(int id, int idVentas, int idProductos, int idCategorias, String nombre, String marca, Double cantidad, Double precio, Double subtotal, Double Total, Ventas ventas, Productos productos, Categorias categoria, int top_aux) {
         this.id = id;
         this.idVentas = idVentas;
         this.idProductos = idProductos;
@@ -39,8 +40,9 @@ public class DetalleVenta {
         this.cantidad = cantidad;
         this.precio = precio;
         this.subtotal = subtotal;
+        this.Total = Total;
         this.ventas = ventas;
-        this.producto = producto;
+        this.productos = productos;
         this.categoria = categoria;
         this.top_aux = top_aux;
     }
@@ -93,11 +95,11 @@ public class DetalleVenta {
         this.marca = marca;
     }
 
-    public String getCantidad() {
+    public Double getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(Double cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -109,12 +111,20 @@ public class DetalleVenta {
         this.precio = precio;
     }
 
-    public int getSubtotal() {
+    public Double getSubtotal() {
         return subtotal;
     }
 
-    public void setSubtotal(int subtotal) {
+    public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
+    }
+
+    public Double getTotal() {
+        return Total;
+    }
+
+    public void setTotal(Double Total) {
+        this.Total = Total;
     }
 
     public Ventas getVentas() {
@@ -125,12 +135,12 @@ public class DetalleVenta {
         this.ventas = ventas;
     }
 
-    public Productos getProducto() {
-        return producto;
+    public Productos getProductos() {
+        return productos;
     }
 
-    public void setProducto(Productos producto) {
-        this.producto = producto;
+    public void setProductos(Productos productos) {
+        this.productos = productos;
     }
 
     public Categorias getCategoria() {
@@ -148,5 +158,4 @@ public class DetalleVenta {
     public void setTop_aux(int top_aux) {
         this.top_aux = top_aux;
     }
-    
 }

@@ -9,9 +9,7 @@
         </group>
         <group name="TIENDA"/>
         <group name="tienda2">
-            <file>file:/C:/Users/Marvin/Documents/tienda2/TIENDA/PerfectShoes.AccesoADatos/src/perfectshoes/accesoadatos/ComunDB.java</file>
             <file>file:/C:/Users/Marvin/Documents/tienda2/TIENDA/PerfectShoes.AccesoADatos/src/perfectshoes/accesoadatos/VentasDAL.java</file>
-            <file>file:/C:/Users/Marvin/Documents/tienda2/TIENDA/PerfectShoes.AccesoADatos/src/perfectshoes/accesoadatos/UsuarioDAL.java</file>
         </group>
     </open-files>
 </project-private>
